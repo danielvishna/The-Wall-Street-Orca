@@ -1,0 +1,49 @@
+Hello,
+Welcome to our project, THE WALL STREET ORCA - Investments problems made easy!
+In this README we will cover 3 topics: How to run our code, Limitations of our
+code, Further development that could be introduced to the project!
+
+1. How to run the project
+First, install the prerequisite by the following command:
+
+pip install -r requirements
+
+Now, that you have all the necessary packages, you are ready to run the code.
+You simply need to run the file code/GraphicInterface.py in the following way:
+
+python3 code/GraphicInterface.py
+
+From there, a graphic interface will open which is trivial to use and has
+explanatory error messages guiding you how to work.
+
+Note: We recommend you to run the network on a range as wide as possible as
+to permit it to learn since the network is not pretrained and adapts itself
+to the market of the day it trades in. Moreover, we recommend running the code
+on a date range prior to that of august 21 as the stock market suffered heavy
+losses. For instance, a potential user of the program would also do so,
+since in days of descent most investors of high frequency trading back up and
+do not approach the stock market, as it is a danger twilight zone.
+
+
+2. Limitations of our code
+As to provide a simple usage experience we had to use a python package which
+downloads data regarding stocks, named yfinance, yet it limits us as it can
+provide us with stock data from the last 60 days. Hence, when running the
+model, you will be limited to being able to run it on the last 60 days.
+We have chosen to do so as website queries are sometimes prone to failure due
+to some reason or another and we did not want our code to potentially fail
+during testing. Thus, to be on the safe side, we preferred to use the yfinance.
+
+
+3. Further development that could be introduced to the project
+As we have said in our report, the learning rate might pose a problem. There is
+a trade-off in the choice of learning rates. A low LR for the NN will provide
+robust results, but will struggle to adapt to a sharp descent in a stock. A
+high LR will religiously follow the trendline but risks becoming a
+semi-extrapolation model. We used the adaptive learning rate of adam
+implemented in keras. But if we had an infinite amount of time and infinite
+acquaitance in machine learning, we would have possible written a new learning
+rate package which will be fitting to the exact requirements of our trading
+deep Q-Learning model. We tried looking on the internet for such a package,
+but we did not find such one who did better than the learning rate implemented
+in the ADAm optimizer.
